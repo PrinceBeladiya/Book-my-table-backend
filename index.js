@@ -10,6 +10,7 @@ const port = 5000
 app.use(cors())
 app.use(express.json());
 
+app.use("/", () => {console.log("Backend activated")});
 app.use("/file", require("./routes/upload"));
 app.use('/api/userAuth', require('./routes/userAuth'))
 app.use('/api/admin', require('./routes/admin'))
